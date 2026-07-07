@@ -1,0 +1,20 @@
+{
+  "name": "kristina-persall-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static HTML and CSS marketing portfolio website for Kristina Persall.",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000",
+    "build": "echo \"Static HTML/CSS site: no build step required.\""
+  },
+  "keywords": [
+    "portfolio",
+    "marketing",
+    "static-site",
+    "html",
+    "css"
+  ],
+  "author": "Kristina Persall",
+  "license": "UNLICENSED"
+}
