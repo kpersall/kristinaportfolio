@@ -25,7 +25,7 @@ The visual style is premium, editorial, recruiter-friendly, and professional, wi
   - Playfair Display
   - Montserrat
   - Inter
-- Static assets: PNG, JPG, PDF, PPTX
+- Static assets: PNG, JPG, PDF, MOV
 
 ## Project Type
 
@@ -92,13 +92,13 @@ You can also open `index.html` directly in a browser.
 
 ## Build Instructions
 
-No build step is required.
+The website is static, but the included build command prepares a `public/` folder for hosts that expect a build output directory.
 
 ```bash
 npm run build
 ```
 
-This confirms the site is static and ready to deploy as-is.
+After the build runs, the generated `public/` folder contains the HTML pages, stylesheet, and referenced assets.
 
 ## Deployment Instructions
 
@@ -109,8 +109,8 @@ This confirms the site is static and ready to deploy as-is.
 3. Select the GitHub repository.
 4. Use these settings:
    - Framework Preset: **Other**
-   - Build Command: `npm run build` or leave blank
-   - Output Directory: `.`
+   - Build Command: `npm run build`
+   - Output Directory: `public`
    - Install Command: `npm install` or leave blank
 5. Deploy.
 
@@ -143,4 +143,3 @@ git push -u origin main
 - Placeholder copy has been removed from production pages.
 - The clean production package should include only website files and referenced assets.
 - `.DS_Store`, local ZIP files, Vercel cache files, and dependency folders are ignored by Git.
-

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "python3 -m http.server 3000",
     "start": "python3 -m http.server 3000",
-    "build": "echo \"Static HTML/CSS site: no build step required.\""
+    "build": "rm -rf public && mkdir -p public && cp *.html styles.css public/ && cp -R assets public/assets && echo \"Static site prepared in public/.\""
   },
   "keywords": [
     "portfolio",
