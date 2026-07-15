@@ -1457,6 +1457,20 @@ a.contact-detail:focus-visible {
   padding: 76px 0 62px;
 }
 
+.resume-hero .hero-copy {
+  max-width: 960px;
+}
+
+.resume-hero h1 {
+  max-width: 930px;
+  font-size: clamp(2.55rem, 4.35vw, 4rem);
+  line-height: 1.08;
+}
+
+.resume-hero .lead {
+  max-width: 74ch;
+}
+
 .resume-hero .button-row .button:first-child {
   min-height: 52px;
   padding: 14px 24px;
@@ -1537,7 +1551,7 @@ a.contact-detail:focus-visible {
 }
 
 .resume-card h2 {
-  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  font-size: clamp(1.85rem, 2.7vw, 2.4rem);
 }
 
 .skill-category {
@@ -1586,9 +1600,9 @@ a.contact-detail:focus-visible {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 24px;
-  padding: 24px 0;
+  grid-template-columns: minmax(190px, 0.36fr) minmax(0, 0.64fr);
+  gap: 28px;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1601,16 +1615,51 @@ a.contact-detail:focus-visible {
   border-bottom: 0;
 }
 
-.timeline-item > div:first-child span {
-  display: block;
-  margin-top: 8px;
-  color: rgba(61, 70, 82, 0.72);
-  font-size: 0.92rem;
+.timeline-item-header {
+  display: grid;
+  align-content: start;
+  gap: 8px;
 }
 
-.timeline-item h3 {
+.timeline-item-header .eyebrow {
+  line-height: 1.45;
+}
+
+.timeline-item-header h3 {
+  font-size: 1.22rem;
+  line-height: 1.25;
+}
+
+.timeline-meta {
+  display: grid;
+  gap: 2px;
+  padding-top: 2px;
+}
+
+.timeline-meta span {
+  color: rgba(61, 70, 82, 0.72);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.timeline-meta .timeline-date {
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+.timeline-item-body {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.resume-impact-label {
   margin-bottom: 12px;
-  font-size: 1.35rem;
+  color: var(--teal);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .resume-list {
@@ -1750,7 +1799,14 @@ a.contact-detail:focus-visible {
 }
 
 .resume-page .cta-panel h2 {
-  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  font-size: clamp(2.1rem, 3.4vw, 3rem);
+}
+
+.resume-page .section-heading.centered h2 {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clamp(1.95rem, 3vw, 2.65rem);
 }
 
 .resume-page .site-footer a {
@@ -1884,7 +1940,17 @@ a.contact-detail:focus-visible {
 
   .timeline-item {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 16px;
+  }
+
+  .timeline-meta {
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    column-gap: 16px;
+  }
+
+  .timeline-item-body {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .award-card img {
@@ -1969,6 +2035,10 @@ a.contact-detail:focus-visible {
     padding: 58px 0 50px;
   }
 
+  .resume-hero h1 {
+    font-size: clamp(2.1rem, 10vw, 2.9rem);
+  }
+
   .resume-stat-grid,
   .resume-proof-grid,
   .tool-list {
@@ -1981,6 +2051,11 @@ a.contact-detail:focus-visible {
 
   .timeline-item {
     padding: 20px 0;
+  }
+
+  .timeline-meta {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 
   .education-proof-card,
