@@ -4,9 +4,9 @@
   "private": true,
   "description": "A static HTML and CSS marketing portfolio website for Kristina Persall.",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "start": "python3 -m http.server 3000",
-    "build": "rm -rf public && mkdir -p public && cp *.html styles.css public/ && cp -R assets public/assets && echo \"Static site prepared in public/.\""
+    "dev": "python3 preview_server.py",
+    "start": "python3 preview_server.py",
+    "build": "rm -rf public && mkdir -p public && cp *.html styles.css sitemap.xml robots.txt public/ && cp -R assets public/assets && echo \"Static site prepared in public/.\""
   },
   "keywords": [
     "portfolio",

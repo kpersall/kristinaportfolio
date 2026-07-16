@@ -12,8 +12,12 @@ Pages included:
 - About
 - Portfolio
 - Resume
+- Recommendations
 - Professional Development
 - Contact
+- Aftermarket Product Photography Gallery
+- CCAR Communications Gallery
+- Drip IV Wellness Marketing Gallery
 
 The visual style is premium, editorial, recruiter-friendly, and professional, with a consistent navy, teal, warm beige, off-white, and charcoal color palette.
 
@@ -49,9 +53,16 @@ portfolio-site/
 ├── about.html
 ├── portfolio.html
 ├── resume.html
+├── recommendations.html
 ├── professional-development.html
 ├── contact.html
+├── aftermarket-gallery.html
+├── ccar-gallery.html
+├── drip-iv-gallery.html
 ├── styles.css
+├── sitemap.xml
+├── robots.txt
+├── preview_server.py
 ├── package.json
 ├── vercel.json
 ├── .gitignore
@@ -88,7 +99,7 @@ Then open:
 http://localhost:3000
 ```
 
-You can also open `index.html` directly in a browser.
+Use the local server instead of opening `index.html` directly so extensionless navigation behaves the same way it will on Vercel.
 
 ## Build Instructions
 

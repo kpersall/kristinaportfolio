@@ -1,5 +1,6 @@
 :root {
   --navy: #172A45;
+  --teal-brand: #4F8C8D;
   --teal: #3D7778;
   --warm-beige: #E8D8C4;
   --off-white: #FAF8F5;
@@ -63,8 +64,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 18px;
+  flex-wrap: nowrap;
+  gap: 12px;
 }
 
 .nav a {
@@ -72,11 +73,32 @@ textarea {
   border-bottom: 2px solid transparent;
   color: var(--charcoal);
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 180ms ease, border-color 180ms ease;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--navy);
+  color: var(--white);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+  transform: translateY(0);
 }
 
 .nav a:hover,
@@ -363,6 +385,7 @@ textarea:focus-visible {
 .contact-info-card,
 .contact-form-card {
   height: 100%;
+  min-width: 0;
 }
 
 .contact-detail-list {
@@ -382,6 +405,11 @@ textarea:focus-visible {
   background: var(--off-white);
   color: var(--charcoal);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.contact-detail > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 a.contact-detail:hover,
@@ -1430,6 +1458,7 @@ a.contact-detail:focus-visible {
 .cta-panel h2 {
   margin: 10px auto 16px;
   color: var(--white);
+  overflow-wrap: anywhere;
 }
 
 .cta-panel .eyebrow {
@@ -1790,6 +1819,109 @@ a.contact-detail:focus-visible {
   flex: 0 0 auto;
 }
 
+.recommendations-hero {
+  padding-top: 52px;
+  padding-bottom: 42px;
+}
+
+.recommendation-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.recommendation-card {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  align-content: start;
+  gap: 12px;
+  scroll-margin-top: 24px;
+}
+
+.recommendation-card h3 {
+  font-size: 1.45rem;
+}
+
+.recommendation-role {
+  color: rgba(61, 70, 82, 0.82);
+  font-size: 0.9rem;
+}
+
+.recommendation-card blockquote,
+.proof-quote-band blockquote,
+.project-proof-card blockquote,
+.compact-endorsement blockquote {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+#gary-fretwell {
+  scroll-margin-top: 24px;
+}
+
+.proof-quote-section,
+.project-proof-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.proof-quote-band,
+.project-proof-card,
+.compact-endorsement {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.42fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  border: 1px solid rgba(23, 42, 69, 0.12);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 12px 28px rgba(23, 42, 69, 0.06);
+}
+
+.project-proof-card {
+  background: linear-gradient(135deg, rgba(232, 216, 196, 0.3), rgba(79, 140, 141, 0.06)), var(--white);
+}
+
+.proof-quote-band cite,
+.project-proof-card cite,
+.compact-endorsement cite {
+  display: grid;
+  gap: 3px;
+  color: rgba(61, 70, 82, 0.82);
+  font-size: 0.82rem;
+  font-style: normal;
+}
+
+.proof-quote-band cite strong,
+.project-proof-card cite strong,
+.compact-endorsement cite strong {
+  color: var(--navy);
+}
+
+.compact-endorsement {
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.45fr) auto;
+}
+
+.standalone-project {
+  border-top: 1px solid var(--line);
+}
+
+.direct-contact-card > p {
+  margin-bottom: 22px;
+}
+
+.direct-contact-actions {
+  display: grid;
+  gap: 12px;
+}
+
 .resume-education-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1935,6 +2067,28 @@ a.contact-detail:focus-visible {
   font-size: 0.9rem;
 }
 
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-nav a {
+  border-bottom: 1px solid transparent;
+  color: var(--navy);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  border-color: var(--teal);
+  outline: none;
+}
+
 .fade-in {
   animation: fadeInUp 520ms ease both;
 }
@@ -1968,7 +2122,18 @@ a.contact-detail:focus-visible {
   }
 
   .nav {
-    justify-content: flex-start;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav a {
+    min-width: 0;
+    padding: 8px 4px;
+    border: 1px solid transparent;
+    border-bottom-width: 2px;
+    text-align: center;
   }
 
   .contact-hero {
@@ -2056,6 +2221,13 @@ a.contact-detail:focus-visible {
     border-left: 0;
   }
 
+  .proof-quote-band,
+  .project-proof-card,
+  .compact-endorsement {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   .award-card img {
     width: 132px;
   }
@@ -2069,11 +2241,16 @@ a.contact-detail:focus-visible {
   }
 
   .nav {
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
   }
 
   .nav a {
-    font-size: 0.7rem;
+    font-size: 0.66rem;
+  }
+
+  .nav a:last-child {
+    grid-column: 1 / -1;
   }
 
   h1 {
@@ -2144,6 +2321,7 @@ a.contact-detail:focus-visible {
 
   .resume-stat-grid,
   .resume-proof-grid,
+  .recommendation-card-grid,
   .tool-list {
     grid-template-columns: 1fr;
   }
@@ -2226,6 +2404,10 @@ a.contact-detail:focus-visible {
 
   .cta-panel {
     padding: 42px 26px;
+  }
+
+  .resume-page .cta-panel h2 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
   }
 
   .portrait-card {
