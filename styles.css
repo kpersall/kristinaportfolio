@@ -1693,6 +1693,103 @@ a.contact-detail:focus-visible {
   gap: 16px;
 }
 
+.recommendation-section .resume-proof-grid {
+  margin-top: 16px;
+}
+
+.executive-recommendation {
+  display: grid;
+  gap: 24px;
+  padding: 34px;
+  border-left: 5px solid var(--teal);
+  background:
+    linear-gradient(135deg, rgba(232, 216, 196, 0.3), rgba(79, 140, 141, 0.08)),
+    var(--white);
+  box-shadow: 0 18px 42px rgba(23, 42, 69, 0.09);
+}
+
+.executive-recommendation-header {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
+  align-items: end;
+  gap: 28px;
+}
+
+.executive-recommendation-header h3 {
+  margin-top: 6px;
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+}
+
+.recommendation-context {
+  color: rgba(61, 70, 82, 0.82);
+  font-size: 0.95rem;
+}
+
+.executive-recommendation blockquote {
+  margin: 0;
+}
+
+.executive-recommendation-quote {
+  padding: 24px 26px;
+  border-top: 1px solid rgba(23, 42, 69, 0.12);
+  border-bottom: 1px solid rgba(23, 42, 69, 0.12);
+}
+
+.executive-recommendation-quote p {
+  max-width: 46ch;
+  color: var(--navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.executive-supporting-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.executive-supporting-quotes blockquote {
+  padding: 18px 20px;
+  border: 1px solid rgba(23, 42, 69, 0.1);
+  border-radius: var(--radius);
+  background: rgba(250, 248, 245, 0.78);
+}
+
+.executive-supporting-quotes p {
+  color: rgba(61, 70, 82, 0.9);
+  font-size: 0.94rem;
+  font-style: italic;
+}
+
+.executive-recommendation-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.executive-recommendation-footer cite {
+  display: grid;
+  gap: 2px;
+  color: rgba(61, 70, 82, 0.8);
+  font-size: 0.86rem;
+  font-style: normal;
+}
+
+.executive-recommendation-footer cite strong {
+  color: var(--navy);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.executive-recommendation-footer .button {
+  flex: 0 0 auto;
+}
+
 .resume-education-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1934,8 +2031,14 @@ a.contact-detail:focus-visible {
   }
 
   .resume-education-grid,
-  .award-card {
+  .award-card,
+  .executive-recommendation-header {
     grid-template-columns: 1fr;
+  }
+
+  .executive-recommendation-footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .timeline-item {
@@ -2062,6 +2165,24 @@ a.contact-detail:focus-visible {
   .resume-proof-card {
     min-height: auto;
     padding: 20px;
+  }
+
+  .executive-recommendation {
+    gap: 20px;
+    padding: 24px 20px;
+    border-left-width: 4px;
+  }
+
+  .executive-recommendation-quote {
+    padding: 20px 0;
+  }
+
+  .executive-supporting-quotes {
+    grid-template-columns: 1fr;
+  }
+
+  .executive-supporting-quotes blockquote {
+    padding: 16px;
   }
 
   .award-card img {
